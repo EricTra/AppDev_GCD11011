@@ -1,0 +1,28 @@
+﻿@model Category
+<h1> Create new Category</h1>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name">
+        <span asp-validation-for="Name" class="text-danger"></span> @* //them popup thong bao loi mau do *@
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input asp-for="Description">
+        <span asp-validation-for="Description" class="text-danger"></span> @* //them popup thong bao loi mau do *@
+    <div class="form-group">
+        <label asp-for="DisplayOrder"></label>
+        <input asp-for="DisplayOrder">
+            <span asp-validation-for="DisplayOrder" class="text-danger"></span> @* //them popup thong bao loi mau do *@
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+
+
